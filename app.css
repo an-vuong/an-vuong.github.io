@@ -451,6 +451,9 @@ a {
     width: calc(100% - 50px);
     height: calc(100% - 320px); } }
 
+.contact-wrapper {
+  text-align: center; }
+
 /* vietnamese */
 @font-face {
   font-family: 'Montserrat';
@@ -491,7 +494,7 @@ a {
   src: local("Raleway"), local("Raleway-Regular"), url(fonts/Raleway-latin.woff2) format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215; }
 
-.sidebar {
+side-bar {
   position: fixed;
   z-index: 999;
   color: #788195;
@@ -500,29 +503,29 @@ a {
   top: 0px;
   height: 100%;
   background: #2b303b; }
-  .sidebar .sb-header {
+  side-bar .sb-header {
     text-align: center;
     padding: 42px 0 0 0; }
-    .sidebar .sb-header .avatar {
+    side-bar .sb-header .avatar {
       display: block;
       width: 150px;
       height: 150px;
       border: 5px solid rgba(120, 129, 149, 0.19);
       margin: auto;
       user-select: none; }
-      .sidebar .sb-header .avatar img {
+      side-bar .sb-header .avatar img {
         width: 140px;
         height: 140px;
         padding: 5px;
         transition: opacity .2s ease;
         opacity: 0.8;
         filter: grayscale(50%); }
-        .sidebar .sb-header .avatar img:hover {
+        side-bar .sb-header .avatar img:hover {
           filter: grayscale(0);
           opacity: 1; }
-    .sidebar .sb-header .info {
+    side-bar .sb-header .info {
       margin-top: 10px; }
-      .sidebar .sb-header .info h1 {
+      side-bar .sb-header .info h1 {
         font-size: 19px;
         line-height: 30px;
         text-align: center;
@@ -530,22 +533,22 @@ a {
         margin: 0px;
         letter-spacing: 2px;
         text-transform: uppercase; }
-      .sidebar .sb-header .info h4 {
+      side-bar .sb-header .info h4 {
         text-align: center;
         font-size: 13px;
         margin: 10px 0;
         font-weight: 300; }
-      .sidebar .sb-header .info h6 {
+      side-bar .sb-header .info h6 {
         text-align: center;
         font-size: 13px;
         font-weight: 400;
         margin: 7px 0; }
-        .sidebar .sb-header .info h6 .fa-location-arrow {
+        side-bar .sb-header .info h6 .fa-location-arrow {
           transition: 0.3s ease; }
-        .sidebar .sb-header .info h6:hover .fa-location-arrow {
+        side-bar .sb-header .info h6:hover .fa-location-arrow {
           color: white;
           transform: rotate(45deg); }
-  .sidebar .sb-separator {
+  side-bar .sb-separator {
     display: block;
     border-top: 1px solid #606777;
     height: 0;
@@ -554,7 +557,7 @@ a {
     margin-right: auto;
     width: 70px;
     opacity: 0.4; }
-  .sidebar .sb-footer {
+  side-bar .sb-footer {
     position: absolute;
     bottom: 0;
     height: 40px;
@@ -562,7 +565,7 @@ a {
     line-height: 44px;
     text-align: center;
     background: #262A34; }
-    .sidebar .sb-footer a {
+    side-bar .sb-footer a {
       width: 25px;
       height: 25px;
       line-height: 26px;
@@ -574,16 +577,16 @@ a {
       display: inline-block;
       -webkit-transition: all .3s ease-in;
       transition: all .3s ease-in; }
-      .sidebar .sb-footer a:hover, .sidebar .sb-footer a:focus {
+      side-bar .sb-footer a:hover, side-bar .sb-footer a:focus {
         color: #fff; }
-  .sidebar nav {
+  side-bar nav {
     position: absolute;
     top: 318px;
     left: 0px;
     right: 0px;
     bottom: 40px;
     margin-top: 7px; }
-    .sidebar nav a {
+    side-bar nav a {
       display: block;
       padding: 3px 25px;
       outline: none;
@@ -591,7 +594,7 @@ a {
       text-decoration: none;
       -webkit-transition: all .2s ease;
       transition: all .2s ease; }
-      .sidebar nav a .fa {
+      side-bar nav a .fa {
         font-size: 21px;
         width: 40px;
         display: inline-block;
@@ -604,18 +607,18 @@ a {
         left: 0;
         float: right;
         transition: all .2s ease; }
-      .sidebar nav a:hover {
+      side-bar nav a:hover {
         color: #fff;
         cursor: pointer; }
-        .sidebar nav a:hover .fa {
+        side-bar nav a:hover .fa {
           background: #788195;
           color: #2b303b; }
-      .sidebar nav a .sb-sectionname {
+      side-bar nav a .sb-sectionname {
         font-size: 13px;
         font-weight: 400;
         line-height: 40px;
         font-family: Montserrat; }
-    .sidebar nav .sb-sectionactive .fa {
+    side-bar nav .sb-sectionactive .fa {
       background: #81B71A !important;
       color: #fff !important; }
 
