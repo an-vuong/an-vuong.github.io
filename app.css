@@ -586,7 +586,12 @@ a {
     left: 0px;
     right: 0px;
     bottom: 40px;
-    margin-top: 7px; }
+    margin-top: 7px;
+    overflow: auto;
+    overflow-x: hidden; }
+    .sidebar nav::-webkit-scrollbar {
+      width: 0px;
+      background: transparent; }
     .sidebar nav a {
       display: block;
       padding: 3px 25px;
@@ -650,6 +655,18 @@ body.hidesidebar .page-wrapper {
   left: 0px;
   width: 100%; }
 
+.uselessScrollbar {
+  position: absolute;
+  right: 0px;
+  width: 5px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0); }
+  .uselessScrollbar div {
+    position: absolute;
+    background: #788195;
+    width: 5px;
+    transition: top .5s ease, bottom .5s ease; }
+
 @media screen and (max-width: 755px) {
   .sidebar {
     position: relative;
@@ -694,7 +711,14 @@ body.hidesidebar .page-wrapper {
   .sb-expanded .has-submenu {
     height: 50px; }
     .sb-expanded .has-submenu .fa {
-      display: block; } }
+      display: block; }
+  .uselessScrollbar {
+    position: fixed;
+    right: auto;
+    left: 0px;
+    z-index: 999; }
+    .uselessScrollbar div {
+      background: #81b71a; } }
 
 top-bar {
   height: 50px;
