@@ -526,7 +526,7 @@ ui-view > div {
     font-size: 11px;
     cursor: pointer;
     border: 1px solid rgba(120, 129, 149, 0.33);
-    transition: color .1s ease, font-size 0.1s ease;
+    transition: color 0.1s ease, font-size 0.1s ease;
     user-select: none; }
     .contact-form .submit_btn:hover {
       color: #19ad00;
@@ -572,6 +572,41 @@ ui-view > div {
   src: local("Raleway"), local("Raleway-Regular"), url(fonts/Raleway-latin.woff2) format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215; }
 
+.CodeMirror-wrap, .CodeMirror-scroll {
+  min-height: 300px; }
+
+.cm-s-monokai.CodeMirror {
+  background: #2b303b !important;
+  color: #f8f8f2; }
+
+.cm-s-monokai .CodeMirror-gutters {
+  background: #21252d;
+  border-right: 1px solid #788195; }
+
+.json-wrapper {
+  background: #e4e4e8; }
+
+.json-toolbar {
+  height: 30px;
+  margin-bottom: 8px;
+  background: #f2f2f4; }
+  .json-toolbar a {
+    display: inline-block;
+    padding: 0px;
+    width: 30px;
+    height: 30px;
+    color: #788195;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer; }
+    .json-toolbar a:hover {
+      background: #81B71A;
+      color: #fff; }
+    .json-toolbar a span {
+      line-height: 30px;
+      width: 30px;
+      height: 30px; }
+
 .sidebar {
   position: fixed;
   z-index: 999;
@@ -596,7 +631,7 @@ ui-view > div {
         width: 140px;
         height: 140px;
         padding: 5px;
-        transition: opacity .2s ease;
+        transition: opacity 0.3s ease;
         opacity: 0.8;
         filter: grayscale(50%); }
         .sidebar .sb-header .avatar img:hover {
@@ -629,7 +664,7 @@ ui-view > div {
         font-weight: 400;
         margin: 7px 0; }
         .sidebar .sb-header .info h6 .fa-location-arrow {
-          transition: 0.3s ease; }
+          transition: transform 0.3s ease; }
         .sidebar .sb-header .info h6::selection {
           color: white;
           text-shadow: 1px 1px 0 #788195; }
@@ -663,8 +698,7 @@ ui-view > div {
       margin: 0 2px;
       background: #2b303b;
       display: inline-block;
-      -webkit-transition: all .3s ease-in;
-      transition: all .3s ease-in; }
+      transition: all 0.3s ease; }
       .sidebar .sb-footer a:hover, .sidebar .sb-footer a:focus {
         color: #fff; }
   .sidebar nav {
@@ -686,8 +720,7 @@ ui-view > div {
       outline: none;
       width: 240px;
       text-decoration: none;
-      -webkit-transition: all .2s ease;
-      transition: all .2s ease; }
+      transition: all 0.3s ease; }
       .sidebar nav a .fa {
         font-size: 21px;
         width: 40px;
@@ -700,7 +733,7 @@ ui-view > div {
         position: relative;
         left: 0;
         float: right;
-        transition: all .2s ease; }
+        transition: all 0.3s ease; }
       .sidebar nav a:hover {
         color: #fff;
         cursor: pointer; }
@@ -755,7 +788,7 @@ body.hidesidebar .page-wrapper {
     position: absolute;
     background: #788195;
     width: 5px;
-    transition: top .5s ease, bottom .5s ease; }
+    transition: top 0.5s ease, bottom 0.5s ease; }
 
 @media screen and (max-width: 755px) {
   .sidebar {
@@ -765,7 +798,7 @@ body.hidesidebar .page-wrapper {
     left: 0; }
     .sidebar nav {
       position: fixed;
-      top: 0px;
+      top: 50px;
       bottom: 0px;
       padding: 0px;
       margin-top: 0px;
@@ -847,7 +880,7 @@ top-bar {
     top-bar .tb-title h1 {
       margin: 0px 0px 0px 10px; }
   top-bar .tb-avatar {
-    display: none; }
+    display: none !important; }
     top-bar .tb-avatar img {
       position: absolute;
       right: 0px;
@@ -864,10 +897,11 @@ top-bar {
     top-bar .tb-button {
       position: fixed;
       top: 0px;
-      right: 0px;
+      left: 0px;
       z-index: 999;
       color: #fff;
-      background: #81B71A; }
+      background: #21252d;
+      border-right-width: 0px; }
       top-bar .tb-button:hover {
         color: #2b303b; }
     top-bar .tb-avatar {
