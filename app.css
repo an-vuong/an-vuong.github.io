@@ -593,7 +593,7 @@ ui-view > div {
   .json-toolbar a {
     display: inline-block;
     padding: 0px;
-    width: 30px;
+    width: 100px;
     height: 30px;
     color: #788195;
     text-align: center;
@@ -602,10 +602,8 @@ ui-view > div {
     .json-toolbar a:hover {
       background: #81B71A;
       color: #fff; }
-    .json-toolbar a span {
-      line-height: 30px;
-      width: 30px;
-      height: 30px; }
+    .json-toolbar a div {
+      display: inline; }
 
 .sidebar {
   position: fixed;
