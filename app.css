@@ -441,7 +441,8 @@ a {
   top: 50px;
   width: calc(100% - 240px);
   height: calc(100% - 50px);
-  transition: width 0.3s ease, left 0.3s ease; }
+  transition: width 0.3s ease, left 0.3s ease;
+  overflow-y: auto; }
 
 ui-view {
   height: 100%; }
@@ -458,7 +459,8 @@ ui-view {
     left: 50px;
     top: auto;
     width: calc(100% - 50px);
-    height: calc(100% - 361px); }
+    height: calc(100% - 361px);
+    overflow-y: initial; }
   ui-view {
     height: calc(100% - 300px); }
     ui-view > div {
@@ -576,8 +578,21 @@ ui-view {
   src: local("Raleway"), local("Raleway-Regular"), url(fonts/Raleway-latin.woff2) format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215; }
 
+.CodeMirror-vscrollbar::-webkit-scrollbar {
+  width: 8px;
+  height: 10px; }
+
+.CodeMirror-vscrollbar::-webkit-scrollbar-track {
+  background: #2b303b; }
+
+.CodeMirror-vscrollbar::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background: #999; }
+  .CodeMirror-vscrollbar::-webkit-scrollbar-thumb:window-inactive {
+    background: #999; }
+
 .CodeMirror-wrap, .CodeMirror-scroll {
-  min-height: 300px; }
+  min-height: 200px; }
 
 .cm-s-monokai.CodeMirror {
   background: #2b303b !important;
@@ -586,6 +601,9 @@ ui-view {
 .cm-s-monokai .CodeMirror-gutters {
   background: #21252d;
   border-right: 1px solid #788195; }
+
+.cm-s-monokai span.cm-property {
+  color: #a6e22e; }
 
 .json-wrapper {
   background: #e4e4e8;
@@ -605,7 +623,8 @@ ui-view {
     color: #788195;
     text-align: center;
     line-height: 30px;
-    cursor: pointer; }
+    cursor: pointer;
+    user-select: none; }
     .json-toolbar a:hover {
       background: #81B71A;
       color: #fff; }
