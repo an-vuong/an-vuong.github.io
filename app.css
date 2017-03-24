@@ -578,6 +578,43 @@ ui-view {
   src: local("Raleway"), local("Raleway-Regular"), url(fonts/Raleway-latin.woff2) format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215; }
 
+.image-wrapper {
+  background: #e4e4e8;
+  height: calc(100% - 10px); }
+  .image-wrapper .image-container {
+    height: calc(100% - 80px); }
+
+.image-toolbar {
+  height: 30px;
+  margin-bottom: 8px;
+  background: #f2f2f4; }
+  .image-toolbar a {
+    display: inline-block;
+    padding: 0px;
+    width: 100px;
+    height: 30px;
+    color: #788195;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    user-select: none; }
+    .image-toolbar a:hover {
+      background: #81B71A;
+      color: #fff; }
+    .image-toolbar a div {
+      display: inline; }
+  .image-toolbar.sub-toolbar a {
+    width: 70px; }
+
+#canvas {
+  border: 1px gray solid; }
+
+.localfile, #localfile {
+  width: 0px;
+  height: 0px;
+  opacity: 0;
+  overflow: hidden; }
+
 .CodeMirror-vscrollbar::-webkit-scrollbar {
   width: 8px;
   height: 10px; }
